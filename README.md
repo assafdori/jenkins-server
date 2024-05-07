@@ -16,4 +16,4 @@ docker run \
 --publish 50000:50000 \
 asixl/jenkins-with-aws-terraform-docker
 ```
-
+#### Alternatively, it can be ran with the docker-compose.yml file that is provided.
