@@ -17,3 +17,6 @@ docker run \
 asixl/jenkins-with-aws-terraform-docker
 ```
 #### Alternatively, it can be ran with the docker-compose.yml file that is provided.
+```bash
+docker compose up -d
+```
