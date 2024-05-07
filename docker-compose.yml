@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  jenkins-with-aws-terraform-docker:
+    image: asixl/jenkins-with-aws-terraform-docker
+    container_name: jenkins-with-aws-terraform-docker
+    networks:
+      - jenkins
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jenkins-docker-certs:/certs/client
+      - jenkins-data:/var/jenkins_home
+    ports:
+      - 8080:8080
+      - 50000:50000
+
+volumes:
+  jenkins-docker-certs:
+  jenkins-data:
+
+networks:
+  jenkins:
+    external: true
