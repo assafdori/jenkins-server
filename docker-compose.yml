@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   jenkins-with-aws-terraform-docker:
     image: asixl/jenkins-with-aws-terraform-docker
